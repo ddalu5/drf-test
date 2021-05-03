@@ -11,4 +11,4 @@ class Restaurant(models.Model):
         return self.name
 
     def save(self, *args, **kwargs):
-        self.name = str(self.name).lower().strip()
+        super(Restaurant, self).save(*args, **kwargs)
