@@ -22,7 +22,8 @@ from service import views
 
 router = routers.DefaultRouter()
 router.register(r'restaurants', views.RestaurantViewSet)
+router.register(r'random', views.RandomRestaurantViewSet, basename='RandomRestaurant')
 
 urlpatterns = [
-    path('', include(router.urls)),
+    path('', include(router.urls))
 ]
